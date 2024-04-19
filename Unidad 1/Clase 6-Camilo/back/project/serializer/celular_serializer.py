@@ -3,4 +3,4 @@ from api.models.celular import Celular
 class CelularSerializers(serializers.ModelSerializer):
     class Meta:
         model = Celular  
-        exclude = ['is_removed', 'created', 'modified']
+        exclude = ["id"]

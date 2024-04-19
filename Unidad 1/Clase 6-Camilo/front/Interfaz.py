@@ -46,16 +46,17 @@ def validar_informacion():
         messagebox.showinfo("Información validada", "La información ha sido validada correctamente.")
 
         data = {
-            "modelo": modelo2.get(),
-            "cuantas_GB_Ram": gb_ram2.get(),
+            "Modelo": modelo2.get(),
+            "Cuantas_Gb_Ram": gb_ram2.get(),
             "Tipo_pantalla": Pantalla2.get(),
             "Nombre_Procesador": Procesador2.get()
 
         }
 
+        print(data)
+
         response = requests.post("http://127.0.0.1:8000/v1/celular",data)
         print(response.status_code)
-        print(response.content)
 
 
     else:
